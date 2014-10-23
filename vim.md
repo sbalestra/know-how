@@ -1,4 +1,4 @@
-# Vim
+# Vim cheat sheet
 
 ## Basic editing
 
@@ -15,8 +15,8 @@ Delete something in parentheses:
 `da)` (including the parentheses)  
 (works for different kinds of brackets and quotation marks)
 
-Can be used on nested pairs of parentheses also:
-`d2a)`
+Can be used on nested pairs of parentheses also:  
+`d2a)`  
 `2da)` (what is the difference?)
 
 ## Navigating
@@ -33,9 +33,8 @@ Jump to a mark (e.g. named x):
 
 ### Navigating on the same line
 
-Next word:
-
-    w
+Next word:  
+`w`
 
 Previous word:
 
@@ -76,8 +75,6 @@ At the end of the current word:
 
     ea
 
-
-
 ## Changing how the editor works
 
 ### Break lines
@@ -87,6 +84,8 @@ Automatic line break after a number of characters (e.g. for git commit messages)
 
 ### Change the language of syntax highlighting
 
-For Markdown:  
+For Markdown:   
+`:set syntax=markdown`
 
-    :set syntax=markdown
+Or specifically for Markdown better force Markdown on all `*.md` files by adding the following to vimrc:  
+`autocmd BufNewFile,BufReadPost *.md set filetype=markdown` (as described at https://github.com/tpope/vim-markdown )
