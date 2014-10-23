@@ -6,7 +6,8 @@ Delete a word:
 `diw` (inner word)  
 `daw` (a/around word)
 
-Delete a word and immediately change to insert mode:  
+Delete a word and immediately change to insert mode:
+
     ciw
 
 Delete something in parentheses:  
@@ -14,56 +15,65 @@ Delete something in parentheses:
 `da)` (including the parentheses)  
 (works for different kinds of brackets and quotation marks)
 
-Can be used on nested pairs of parentheses also:  
-    d2a)
-    2da)
-(what is the difference?)
+Can be used on nested pairs of parentheses also:
+`d2a)`
+`2da)` (what is the difference?)
 
 ## Navigating
 
 ### Navigating between lines
 
-Set a mark (e.g. named x):  
+Set a mark (e.g. named x):
+
     mx
 
-Jump to a mark (e.g. named x):  
+Jump to a mark (e.g. named x):
+
     'a
 
 ### Navigating on the same line
 
-	asdf asdf asdf
+Next word:
 
-Next word:  
     w
 
-Previous word:  
+Previous word:
+
     b
 
 Beginning of first word:
+
     ^
 
-Before the first word:  
+Before the first word:
+
     0
 
 ## Entering insert mode
 
 ### Big movements
-At end of line:  
+
+At end of line:
+
     A
 
-At the beginning of the first word:  
+At the beginning of the first word:
+
     I
 
 
 ### Small movements
 
-Before (at) cursor:  
+Before (at) cursor:
+
     i
 
-After cursor:  
+After cursor:
+
     a
 
-At the end of the current word:  
+At the end of the current word:
+
     ea
 
 
@@ -78,4 +88,5 @@ Automatic line break after a number of characters (e.g. for git commit messages)
 ### Change the language of syntax highlighting
 
 For Markdown:  
+
     :set syntax=markdown
