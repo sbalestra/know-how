@@ -6,9 +6,8 @@ Delete a word:
 `diw` (inner word)  
 `daw` (a/around word)
 
-Delete a word and immediately change to insert mode:
-
-    ciw
+Delete a word and immediately change to insert mode:  
+`ciw`
 
 Delete something in parentheses:  
 `di)` (without the parentheses)  
@@ -24,12 +23,10 @@ Can be used on nested pairs of parentheses also:
 ### Navigating between lines
 
 Set a mark (e.g. named x):
-
-    mx
+`mx`
 
 Jump to a mark (e.g. named x):
-
-    'a
+`'a`
 
 ### Navigating on the same line
 
@@ -37,43 +34,35 @@ Next word:
 `w`
 
 Previous word:
-
-    b
+`b`
 
 Beginning of first word:
-
-    ^
+`^`
 
 Before the first word:
-
-    0
+`0`
 
 ## Entering insert mode
 
 ### Big movements
 
 At end of line:
-
-    A
+`A`
 
 At the beginning of the first word:
-
-    I
+`I`
 
 
 ### Small movements
 
 Before (at) cursor:
-
-    i
+`i`
 
 After cursor:
-
-    a
+`a`
 
 At the end of the current word:
-
-    ea
+`ea`
 
 ## Changing how the editor works
 
