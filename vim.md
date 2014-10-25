@@ -2,6 +2,8 @@
 
 ## Basic editing
 
+(Well, maybe not so basic if you are completely new to Vim... Vim has also a nice tutorial which can be started using `vimtutor`)
+
 Delete a word:   
 `diw` (inner word)  
 `daw` (a/around word)
