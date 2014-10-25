@@ -18,6 +18,11 @@ Can be used on nested pairs of parentheses also:
 `d2a)`  
 `2da)` (what is the difference?)
 
+Copy a word an overwrite another word with it:  
+`yiw`  
+`viwp`  
+(works only once unfortunately)
+
 ## Navigating
 
 ### Navigating between lines
