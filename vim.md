@@ -31,7 +31,7 @@ Set a mark (e.g. named x):
 `mx`
 
 Jump to a mark (e.g. named x):  
-`'a`
+`'x`
 
 ### Navigating on the same line
 
