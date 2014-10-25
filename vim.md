@@ -69,6 +69,25 @@ After cursor:
 At the end of the current word:  
 `ea`
 
+## Window Splits
+
+Split horizontally:  
+`:split` (short: `:sp`)
+
+Split vertically:  
+`:vsplit` (short: `:vs`)
+
+Navigate between splits:  
+`Ctrl-W` and on of these: `h, j, k, l`
+
+Make split:  
+- higher: `Ctrl-W, +`  
+- lower: `Ctrl-W, -`  
+- wider, narrower: `Ctrl-W, <` and `Ctrl-W, >`
+
+Make all splits equal size (horizontally and vertically):  
+`Ctrl-W, =` or `:winc=`
+
 ## Changing how the editor works
 
 ### Break lines
