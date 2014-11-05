@@ -90,6 +90,18 @@ Make split:
 Make all splits equal size (horizontally and vertically):  
 `Ctrl-W, =` or `:winc=`
 
+## Searching and Replacing
+
+Delete all lines matching a regex:  
+`:g/theregex/d`
+
+Delete all lines *not* matching a regex:  
+`:g!/theregex/d`
+
+Notes:  
+- Get a preview of affected lines by removing `d`
+- Increse speed by calling `d_` instead of `d`. (Source: http://vim.wikia.com/wiki/Power_of_g )
+
 ## Changing how the editor works
 
 ### Break lines
