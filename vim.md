@@ -35,6 +35,12 @@ Set a mark (e.g. named x):
 Jump to a mark (e.g. named x):  
 `'x`
 
+Go to previously visited location:  
+`Ctrl-O`
+
+Go to next visited location:  
+`Ctrl-I` or `Tab`
+
 ### Navigating on the same line
 
 Next word:  
