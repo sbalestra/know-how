@@ -20,6 +20,11 @@ Can be used on nested pairs of parentheses also:
 `d2a)`  
 `2da)` (what is the difference?)
 
+Delete all characters up to the next X:  
+`dfX` (deletes X)  
+`dtX` (keeps X)  
+(Source: http://askubuntu.com/questions/64833/vi-shortcut-to-delete-until-the-next-x-character)
+
 Copy a word an overwrite another word with it:  
 `yiw`  
 `viwp`  
