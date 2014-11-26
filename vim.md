@@ -25,6 +25,9 @@ Delete all characters up to the next X:
 `dtX` (keeps X)  
 (Source: http://askubuntu.com/questions/64833/vi-shortcut-to-delete-until-the-next-x-character)
 
+Delete a whole sentence:  
+`das`
+
 Copy a word an overwrite another word with it:  
 `yiw`  
 `viwp`  
