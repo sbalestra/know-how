@@ -49,6 +49,11 @@ Go to previously visited location:
 Go to next visited location:  
 `Ctrl-I` or `Tab`
 
+Move cursor to:  
+- the top line: `H` ("high")
+- the middle line: `M`
+- the bottom line: `L` ("low")
+
 ### Navigating on the same line
 
 Next word:  
