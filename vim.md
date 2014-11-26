@@ -49,10 +49,15 @@ Go to previously visited location:
 Go to next visited location:  
 `Ctrl-I` or `Tab`
 
-Move cursor to:  
+Move cursor to (without scrolling the page):  
 - the top line: `H` ("high")
 - the middle line: `M`
 - the bottom line: `L` ("low")
+
+Move the line where the cursor is to:  
+- the top: `zt` or `z<Enter>`
+- the middle: `zz`or `z.`
+- the bottom: `zb`
 
 ### Navigating on the same line
 
