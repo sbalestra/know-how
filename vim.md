@@ -97,10 +97,10 @@ At the end of the current word:
 
 ## Window Splits
 
-Split horizontally:  
+Split horizontally (`-`):  
 `:split` (short: `:sp`)
 
-Split vertically:  
+Split vertically (`|`):  
 `:vsplit` (short: `:vs`)
 
 Navigate between splits:  
@@ -113,6 +113,14 @@ Make split:
 
 Make all splits equal size (horizontally and vertically):  
 `Ctrl-W, =` or `:winc=`
+
+### Open multiple files in splitted mode
+
+Horizontally (`-`):  
+`vim -o file1 file2 file3`
+
+Vertically (`|`):  
+`vim -O file1 file2 file3`
 
 ## Searching and Replacing
 
