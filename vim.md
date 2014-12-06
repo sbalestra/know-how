@@ -107,9 +107,9 @@ Navigate between splits:
 `Ctrl-W` and on of these: `h, j, k, l`
 
 Make split:  
-- higher: `Ctrl-W, +`  
-- lower: `Ctrl-W, -`  
-- wider, narrower: `Ctrl-W, <` and `Ctrl-W, >`
+- higher: `Ctrl-w, +`  
+- lower: `Ctrl-w, -`  
+- wider, narrower: `Ctrl-w, <` and `Ctrl-w, >`
 
 Make all splits equal size (horizontally and vertically):  
 `Ctrl-W, =` or `:winc=`
@@ -133,6 +133,11 @@ Delete all lines *not* matching a regex:
 Notes:  
 - Get a preview of affected lines by removing `d`
 - Increse speed by calling `d_` instead of `d`. (Source: http://vim.wikia.com/wiki/Power_of_g )
+
+### Word counting
+
+Count the number of words:  
+mark the words with visual mode, then `g`, then `Ctrl-g` (from http://vim.wikia.com/wiki/Word_count )
 
 ## Changing how the editor works
 
