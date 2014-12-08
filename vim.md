@@ -124,6 +124,8 @@ Vertically (`|`):
 
 ## Searching and Replacing
 
+### Delete certain lines
+
 Delete all lines matching a regex:  
 `:g/theregex/d`
 
@@ -133,6 +135,18 @@ Delete all lines *not* matching a regex:
 Notes:  
 - Get a preview of affected lines by removing `d`
 - Increse speed by calling `d_` instead of `d`. (Source: http://vim.wikia.com/wiki/Power_of_g )
+
+### Replace pattern only on lines matching another pattern
+
+Replace `old`with `new` only on lines matching `condition`:  
+
+`:g/condition/old/new` 
+
+Replace `old`with `new` only on lines NOT matching `condition`:  
+
+`:g!/condition/old/new` 
+
+(Source: https://stackoverflow.com/questions/12010308/how-can-i-replace-a-pattern-only-on-lines-that-do-or-do-not-contain-another-patt )
 
 ### Word counting
 
