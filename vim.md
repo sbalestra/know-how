@@ -95,6 +95,17 @@ After cursor:
 At the end of the current word:  
 `ea`
 
+## Advanced Editing
+
+### Insert text at the beginning of multiple visually selected lines
+
+1. Use `Ctrl-v` to select the first column of text in the lines to edit
+2. `Shift-i`
+3. Type text to be inserted
+4. `Esc` (and wait 1s)
+
+(from https://stackoverflow.com/questions/253380/how-do-i-insert-text-at-beginning-of-a-multi-line-selection-in-vi-vim )
+
 ## Window Splits
 
 Split horizontally (`-`):  
@@ -140,11 +151,11 @@ Notes:
 
 Replace `old`with `new` only on lines matching `condition`:  
 
-`:g/condition/old/new` 
+`:g/condition/s/old/new` 
 
 Replace `old`with `new` only on lines NOT matching `condition`:  
 
-`:g!/condition/old/new` 
+`:g!/condition/s/old/new` 
 
 (Source: https://stackoverflow.com/questions/12010308/how-can-i-replace-a-pattern-only-on-lines-that-do-or-do-not-contain-another-patt )
 
