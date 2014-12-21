@@ -179,3 +179,22 @@ For Markdown:
 Or specifically for Markdown better force Markdown on all `*.md` files by adding the following to vimrc:  
 `autocmd BufNewFile,BufReadPost *.md set filetype=markdown`  
 (as described at https://github.com/tpope/vim-markdown )
+
+## vimdiff
+
+Compare two files:  
+`vimdiff file1 file2`
+
+### Show/hide identical lines
+
+Show all lines:  
+`zR`
+
+Fold all identical sections:  
+`zM`
+
+Open the current fold:  
+`zo`
+
+Close the current fold:  
+`zc`
