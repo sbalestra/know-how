@@ -15,7 +15,7 @@ This document shows some of the steps I apply to newly installed Ubuntu systems 
 ### Install from repository
     sudo apt-get update
     sudo apt-get upgrade
-    sudo apt-get install wireshark vim colordiff tree libxml2-utils xmlstarlet dos2unix gnome-session-fallback
+    sudo apt-get install wireshark vim colordiff tree libxml2-utils xmlstarlet dos2unix gnome-session-fallback gnome-tweak-tool
 
 Re-Login with "GNOME Flashback (Metacity)"
 
@@ -43,6 +43,9 @@ Gear-wheel (top right corner) -> System settings -> Brightness & Lock
 ##### Configure Terminal
 - Increase scrollbuffer
 - Black font on white background
+
+##### Disable subpixel font anti-aliasing 
+`gnome-tweak-tool` -> Fonts -> Antialiasing -> Grayscale
 
 ### Configure Eclipse
 
