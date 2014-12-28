@@ -83,6 +83,6 @@ Window -> Preferences -> Run/Debug -> Console -> Console buffer size
 In `/etc/fstab` add the options `noatime,nodiratime`.
 
 ##### Remove packages
-     sudo apt-get autoremove libreoffice-* transmission-* deja-dup zeitgeist bluez brasero rhythmbox gnome-screensaver apport thunderbird
+     sudo apt-get autoremove libreoffice-* transmission-* deja-dup zeitgeist bluez brasero rhythmbox gnome-screensaver apport thunderbird unity-webapps-common
 
 
