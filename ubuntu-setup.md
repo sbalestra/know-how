@@ -50,7 +50,7 @@ Gear-wheel (top right corner) -> System settings -> Brightness & Lock
 ### Configure Eclipse
 
 ##### Switch Tabs with Ctrl-Tab
-Window -> Preferences -> General -> Keys -> Command: "Change Next Editor" (Ctrl-F6) to Ctrl-Tab and "Previous Editor" to Shift-Ctrl-Tab
+Window -> Preferences -> General -> Keys -> Command: "Change Next Editor" (Ctrl-F6) to Ctrl-Tab and "Previous Editor" to Shift-Ctrl-Tab (when working with Eclipse CDT, one needs to unbind/remap the command "Toggle Source/Header", which is mapped to Ctrl-Tab by default)
 
 ##### Install Vrapper plugin
 Help -> Install new software -> Work with: http://vrapper.sourceforge.net/update-site/stable/ -> Enter
