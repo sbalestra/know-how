@@ -1,6 +1,6 @@
 # Ubuntu Setup
 
-This document shows some of the steps I apply to newly installed Ubuntu systems (typically virtual machines) to make them better fit my needs.
+This document shows some of the steps I apply to newly installed Ubuntu systems (typically virtual machines) to make them better fit my needs. This is tested with Ubuntu 14.10 Desktop 64-bit.
 
 ## First steps
 
@@ -88,4 +88,7 @@ In `/etc/fstab` add the options `noatime,nodiratime`.
 ##### Remove packages
      sudo apt-get autoremove libreoffice-* transmission-* deja-dup zeitgeist bluez brasero rhythmbox gnome-screensaver apport thunderbird unity-webapps-common
 
+##### Disable animated logos when clicking on shortcuts in the top taskbar
+The animation can be disabled with `gsettings set org.gnome.desktop.interface enable-animations false`. Unfortunately the setting is not permanent. http://forum.ubuntuusers.de/topic/gnome-animationen-deaktivieren/ recommends:
 
+Start `gnome-session-properties` and put the above command into auto start.
