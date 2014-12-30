@@ -88,6 +88,9 @@ In `/etc/fstab` add the options `noatime,nodiratime`.
 ##### Remove packages
      sudo apt-get autoremove libreoffice-* transmission-* deja-dup zeitgeist bluez brasero rhythmbox gnome-screensaver apport thunderbird unity-webapps-common
 
+##### Disable border shadows
+    gsettings set org.gnome.metacity compositing-manager false
+
 ##### Disable animated logos when clicking on shortcuts in the top taskbar
 The animation can be disabled with `gsettings set org.gnome.desktop.interface enable-animations false`. Unfortunately the setting is not permanent. http://forum.ubuntuusers.de/topic/gnome-animationen-deaktivieren/ recommends:
 
