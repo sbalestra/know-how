@@ -23,15 +23,19 @@ Newer entries are on top and have a lower number in `stash@{3}`. Dates of stashe
 ##### Apply a stash
 
 Apply the most recent stash:  
+
     git stash apply
 
 Apply the most recent stash and re-stage files that were staged when stashing:  
+
     git stash apply --index
 
 Apply the most recent stash and remove it from the stash stack:
+
     git stash pop
 
 Apply an older stash:  
+
     git stash apply stash@{3}
 
 ##### Un-apply a stash
