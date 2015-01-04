@@ -22,6 +22,10 @@ Newer entries are on top and have a lower number in `stash@{3}`. Dates of stashe
 
 ##### Apply a stash
 
+Get a preview what applying a stash will look like (from http://stackoverflow.com/q/7677736 ):
+
+    git stash show -p stash@{0}
+
 Apply the most recent stash:  
 
     git stash apply
