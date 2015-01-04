@@ -10,6 +10,10 @@ URL: https://www.sqlite.org/cli.html
 
     .tables
 
+Unfortunately the output has multiple columns and is therefore not per se suitable for further processing in scripts. An alternative is:
+
+    sqlite3 out.sqlite '.schema' | grep "CREATE TABLE '" | sed -e "s/^CREATE TABLE '\([^']*\)'.*$/\1/"
+
 ##### Show columns
 
     PRAGMA table_info(my_table);
