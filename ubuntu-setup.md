@@ -15,7 +15,7 @@ This document shows some of the steps I apply to newly installed Ubuntu systems 
 ### Install from repository
     sudo apt-get update
     sudo apt-get upgrade
-    sudo apt-get install wireshark vim colordiff tree libxml2-utils xmlstarlet dos2unix gnome-session-fallback gnome-tweak-tool
+    sudo apt-get install wireshark vim colordiff tree libxml2-utils xmlstarlet dos2unix gnome-session-fallback gnome-tweak-tool vlc
 
 Re-Login with "GNOME Flashback (Metacity)"
 
@@ -39,6 +39,13 @@ Gear-wheel (top right corner) -> System settings -> Brightness & Lock
 - Preferences -> Privacy -> Tracking -> Tell sites that I do not want to be tracked
 - Preferences -> Advanced -> Data choices -> Disable all
 - Preferences -> Advanced -> General -> Browsing -> [X] Use autoscrolling, [ ] Use smooth scrolling
+
+If Firefox doesn't recognize PDF files, but instead wants to open them with VLC, open (or create) `~/.local/share/applications/defaults.list` and add the following lines:
+
+```
+[Default Applications]
+application/pdf=evince.desktop;
+```
 
 ##### Configure Terminal
 - Increase scrollbuffer
