@@ -2,6 +2,8 @@
 
 URL: https://www.sqlite.org/cli.html
 
+## Get (meta) information
+
 ##### Show databases
 
     .databases
@@ -21,6 +23,14 @@ Unfortunately the output has multiple columns and is therefore not per se suitab
 ##### Show rows
 
     SELECT * FROM my_table;
+
+## Do some work
+
+##### Rename table
+
+ALTER TABLE 'oldname' RENAME TO 'newname';
+
+## Other
 
 ##### Use timer
 
