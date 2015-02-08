@@ -32,7 +32,7 @@ and for attached databases:
 
 ##### Rename table
 
-ALTER TABLE 'oldname' RENAME TO 'newname';
+    ALTER TABLE 'oldname' RENAME TO 'newname';
 
 ## Other
 
