@@ -20,6 +20,10 @@ Unfortunately the output has multiple columns and is therefore not per se suitab
 
     PRAGMA table_info(my_table);
 
+and for attached databases:
+
+    PRAGMA my_db_alias.table_info(my_table);
+
 ##### Show rows
 
     SELECT * FROM my_table;
