@@ -63,3 +63,19 @@ This drops the stash.
 or shorter for the most recent stash:
 
     git stash drop
+
+## Squashing
+
+Source: https://ariejan.net/2011/07/05/git-squash-your-latests-commits-into-one/
+
+Assumption: You have some local commits that you want to combine before pushing them to a shared repository. (Don't do this if the commits have already been published!)
+
+Say you want to combine the latest 3 commits, then do:
+
+    git rebase -i HEAD~3
+
+The order is latest at the bottom, in contrast to `git log` where the latest commits are on top.
+
+Change the word `pick` to `squash` on all lines except the first. Save the file and quit your editor.
+
+A new editor window opens. Choose a commit message. Everything without `#` in front will be contained in the commit message.
