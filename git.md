@@ -1,5 +1,70 @@
 # Git cheat sheet
 
+## Branching
+
+### Create a new local branch
+
+Create a new local branch that will be visible only locally:
+
+`git checkout -b newbranch` = `git branch newbranch ; git checkout newbranch`
+
+Changes to the working directory are unaffected by this (see http://stackoverflow.com/a/2569513 ).
+
+### Merge changes from feature branch into master branch (locally)
+
+    git checkout master
+    git merge featurebranch
+
+### Publish a local branch
+
+    git push origin mybranch
+
+or if the branch should have another name on the server:
+
+    git push origin localbranch:remotebranch
+
+To create a "tracking branch" (="upstream branch"):
+
+    git push -u origin mybranch
+
+To make a branch a tracking branch subsequently (after having created the branch):
+
+    git branch -u origin/remotebranch [notthecurrentlocalbranch]
+
+or
+
+    git branch --set-upstream-to=origin/remotebranch localbranch
+
+### Creating a tracking branch from a remote branch
+
+    git checkout --track origin/remotebranch
+
+(Note: `git checkout origin/remotebranch` would check out the branch in detached HEAD state.)
+
+or
+
+`git checkout remotebranch` (?)
+
+Alternative if you want another local branch name:
+
+    git branch localbranch origin/remotebranch
+
+Discussion: See http://stackoverflow.com/q/10002239
+
+### Verify tracking status of a branch
+
+    git branch -vv
+
+### Deleting a branch
+
+Deleting a local branch:
+
+    git branch -d localbranch
+
+Deleting a remote branch:
+
+`git push origin --delete remotebranch` = `git push origin :remotebranch`
+
 ## Diffing
 
 Show diff between working directory and the index (=what could be added with `git add` but hasn't yet been added):
