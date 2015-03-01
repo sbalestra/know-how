@@ -88,7 +88,7 @@ Sources:
 - http://git-scm.com/docs/git-diff
 - http://www.gitguys.com/topics/git-diff/
 
-# Resetting
+## Resetting
 
 See http://git-scm.com/blog/2011/07/11/reset.html
 
