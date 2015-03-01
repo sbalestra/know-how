@@ -102,3 +102,20 @@ The order is latest at the bottom, in contrast to `git log` where the latest com
 Change the word `pick` to `squash` on all lines except the first. Save the file and quit your editor.
 
 A new editor window opens. Choose a commit message. Everything without `#` in front will be contained in the commit message.
+
+##### Squash remote commits
+
+If you really must squash remote commits, perform the local steps as described above.
+
+Then force the upload by:
+
+    git push origin +mybranch
+
+If local and remote branches have different names:
+
+    git push origin +localbranch:remotebranch
+
+Sources:
+
+- https://stackoverflow.com/questions/5667884/how-to-squash-commits-in-git-after-they-have-been-pushed
+- http://git-scm.com/docs/git-push (see last example at the end of the document: `git push origin +dev:master`)
