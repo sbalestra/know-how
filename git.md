@@ -23,6 +23,10 @@ Sources:
 - http://git-scm.com/docs/git-diff
 - http://www.gitguys.com/topics/git-diff/
 
+# Resetting
+
+See http://git-scm.com/blog/2011/07/11/reset.html
+
 ## Stashing
 
 See also http://git-scm.com/book/en/v1/Git-Tools-Stashing
