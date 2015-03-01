@@ -1,5 +1,28 @@
 # Git cheat sheet
 
+## Diffing
+
+Show diff between working directory and the index (=what could be added with `git add` but hasn't yet been added):
+
+    git diff
+
+Show diff between the index and the most recent commit:
+
+`git diff --staged` = `git diff --cached`
+
+Show diff between working dirctory and the most recent commit:
+
+    git diff HEAD
+
+Show diff between two commits:
+
+    git diff oldhash newhash
+
+Sources:
+
+- http://git-scm.com/docs/git-diff
+- http://www.gitguys.com/topics/git-diff/
+
 ## Stashing
 
 See also http://git-scm.com/book/en/v1/Git-Tools-Stashing
