@@ -180,6 +180,17 @@ Or specifically for Markdown better force Markdown on all `*.md` files by adding
 `autocmd BufNewFile,BufReadPost *.md set filetype=markdown`  
 (as described at https://github.com/tpope/vim-markdown )
 
+## Misc
+
+### Get the name of the current file
+
+Only the filename:  
+`Ctrl-g`
+
+The full path:  
+`1 Ctrl-g`
+
+
 ## vimdiff
 
 Compare two files:  
