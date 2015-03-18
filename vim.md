@@ -95,7 +95,7 @@ After cursor:
 At the end of the current word:  
 `ea`
 
-## Advanced Editing
+## Advanced editing
 
 ### Insert text at the beginning of multiple visually selected lines
 
@@ -105,6 +105,31 @@ At the end of the current word:
 4. `Esc` (and wait 1s)
 
 (from https://stackoverflow.com/questions/253380/how-do-i-insert-text-at-beginning-of-a-multi-line-selection-in-vi-vim )
+
+### Recording / applying / showing macros
+
+Start recording into register x (could be any from a to z):  
+`qx`
+
+Then type everything you want to record.
+
+Stop recording:  
+`q`
+
+Apply the recorded command from register x:  
+`@x`
+
+Apply it 5 times:  
+`5@x`
+
+Repeat execution of the last macro:  
+`@@`
+
+Show the content of register x:  
+`:reg x`
+
+Built-in help:  
+`:help recording`
 
 ## Window Splits
 
