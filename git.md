@@ -83,6 +83,10 @@ Show diff between two commits:
 
     git diff oldhash newhash
 
+Show diff between an older commit and its parent:  
+
+`git diff oldhash^!` (diff only) or `git show oldhash` (diff and commit message) (Source: https://stackoverflow.com/questions/436362/shorthand-for-diff-of-git-commit-with-its-parent )
+
 Sources:
 
 - http://git-scm.com/docs/git-diff
