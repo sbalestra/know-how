@@ -10,6 +10,12 @@ Create a new local branch that will be visible only locally:
 
 Changes to the working directory are unaffected by this (see http://stackoverflow.com/a/2569513 ).
 
+### Create a new local branch from a previous commit
+
+    git checkout -b nameofbranch <hash>
+
+(from http://stackoverflow.com/a/2816728)
+
 ### Merge changes from feature branch into master branch (locally)
 
     git checkout master
