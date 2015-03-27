@@ -71,6 +71,14 @@ Deleting a remote branch:
 
 `git push origin --delete remotebranch` = `git push origin :remotebranch`
 
+### Showing all branches as tree
+
+    git config --global alias.lgb "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches"
+
+    git lgb
+
+(Source: http://stackoverflow.com/a/2421063 )
+
 ## Diffing
 
 Show diff between working directory and the index (=what could be added with `git add` but hasn't yet been added):
