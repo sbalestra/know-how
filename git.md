@@ -106,6 +106,14 @@ Sources:
 - http://git-scm.com/docs/git-diff
 - http://www.gitguys.com/topics/git-diff/
 
+## Getting information
+
+Get a list of commits including which files were changed:  
+
+    git log --stat
+
+There are other commands as well, see http://stackoverflow.com/a/1230094
+
 ## Resetting
 
 See http://git-scm.com/blog/2011/07/11/reset.html
