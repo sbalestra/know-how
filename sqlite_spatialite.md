@@ -28,6 +28,10 @@ and for attached databases:
 
     SELECT * FROM my_table;
 
+##### Show geometries as WKT
+
+    SELECT AsText(geometry) FROM my_table;
+
 ## Do some work
 
 ##### Rename table
