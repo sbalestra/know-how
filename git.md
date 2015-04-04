@@ -214,3 +214,46 @@ Sources:
 
 - https://stackoverflow.com/questions/5667884/how-to-squash-commits-in-git-after-they-have-been-pushed
 - http://git-scm.com/docs/git-push (see last example at the end of the document: `git push origin +dev:master`)
+
+## Complex use-cases
+
+### Apply changes of a diverging branch (with confidential information in some files) into another branch
+
+Given branches:  
+- side (branch with partially confidential information)
+- target (changes should be applied on top of this branch)
+
+Steps:  
+
+    git checkout side
+
+Create new temporary branch and switch to it:  
+
+    git checkout -b tmp
+
+Combine the changes in the side branch into one commit (assumption: 5 commits were made in this branch and are to be comined into one):
+
+    git rebase -i HEAD~5
+
+(Choose `pick` for the first line and `squash` for the others then save and quit. In the next step choose a commit message.)
+
+Change to the target branch:
+
+    git checkout target
+
+Cherry-pick from the new commit without automatically committing:
+
+    git cherry-pick -n tmp
+
+Resolve conflicts if necessary and remove the confidential information.
+
+Add the files and do the commit.
+
+    git add ...
+    git commit -m "..."
+
+Delete the temporary branch:
+
+    git branch -D tmp
+
+Source: http://stackoverflow.com/questions/5717026/how-to-git-cherry-pick-only-changes-to-certain-files
