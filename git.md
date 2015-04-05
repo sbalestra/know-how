@@ -83,6 +83,46 @@ Deleting a remote branch:
 
 (Source: http://stackoverflow.com/a/2421063 )
 
+## Rebasing
+
+The command
+
+    git checkout sourcebranch
+    git rebase targetbranch
+
+or alternatively
+
+    git rebase targetbranch sourcebranch
+
+(Mnemonic: First I want the things from targetbranch happening, then things from sourcebranch. See also http://think-like-a-git.net/sections/rebase-from-the-ground-up/a-helpful-mnemonic-for-git-rebase-arguments.html )
+
+does the following:  
+
+- Search the common ancestor commit of targetbranch and the current branch (sourcebranch = HEAD)
+- Memorize the commits between sourcebranch/HEAD and the common ancestor
+- Replay these commits on top of targetbranch (the commit hashes will change)
+- Move HEAD and the sourcebranch pointer at the end of the newly created changes
+
+If there were no more pointers on the tip of the old (cut out) commits, they are now not easily reachable anymore.
+
+Usually one will want to advance the targetbranch pointer by:
+
+    git checkout targetbranch
+    git merge sourcebranch
+
+(which will do a fast-forward merge)
+
+Maybe you want to delete the sourcebranch pointer as well:
+
+    git branch -d sourcebranch
+
+Changes that exist outside your local repository should not be rebased, i.e. the commits between sourcebranch and the common ancestor.
+
+Sources:
+
+- https://www.atlassian.com/git/tutorials/merging-vs-rebasing/conceptual-overview
+- https://git-scm.herokuapp.com/book/en/v2/Git-Branching-Rebasing
+
 ## Diffing
 
 Show diff between working directory and the index (=what could be added with `git add` but hasn't yet been added):
