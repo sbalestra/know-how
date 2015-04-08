@@ -45,7 +45,7 @@ or
 
     git branch --set-upstream-to=origin/remotebranch localbranch
 
-### Creating a tracking branch from a remote branch
+### Checkout a remote branch / Create a tracking branch from a remote branch
 
     git checkout --track origin/remotebranch
 
