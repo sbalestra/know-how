@@ -21,3 +21,6 @@ let xml_syntax_folding=1
 
 " force markdown for .md files ( https://github.com/tpope/vim-markdown )
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+" don't hide long lines by showing @ characters ( http://stackoverflow.com/questions/21955785/why-does-vim-hide-wrapped-lines-and-prints-multiple-s )
+:set display+=lastline
