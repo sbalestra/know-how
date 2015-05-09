@@ -26,3 +26,7 @@ Parameters:
     avconv -i input.avi -c:v libx264 output.mp4
 
 Source: http://stackoverflow.com/a/18979552
+
+# Prepare for upload to Mapillary (remove audio, convert videoformat)
+
+    avconv -i input.avi -an -c:v libx264 output.mp4
