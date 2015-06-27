@@ -30,3 +30,7 @@ Source: http://stackoverflow.com/a/18979552
 # Prepare for upload to Mapillary (remove audio, convert videoformat)
 
     avconv -i input.avi -an -c:v libx264 output.mp4
+
+# Change container format
+
+see https://superuser.com/questions/378726/convert-from-mov-to-mp4-container-format
