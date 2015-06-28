@@ -33,4 +33,10 @@ Source: http://stackoverflow.com/a/18979552
 
 # Change container format
 
-see https://superuser.com/questions/378726/convert-from-mov-to-mp4-container-format
+    ffmpeg -i input.mp4 -c copy -map 0 output.mkv
+
+or
+
+    avconv -i input.mp4 -c copy -map 0 output.mkv
+
+Source: https://superuser.com/questions/378726/convert-from-mov-to-mp4-container-format
