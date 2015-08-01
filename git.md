@@ -150,6 +150,12 @@ Sources:
 - http://git-scm.com/docs/git-diff
 - http://www.gitguys.com/topics/git-diff/
 
+### Diff options
+
+Limit diff to single words: `--word-diff[=color]`
+
+Specify what words look like: `--word-diff-regex=[^[:space:],]+`
+
 ## Getting information
 
 Get a list of commits including which files were changed:  
