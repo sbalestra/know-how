@@ -221,6 +221,10 @@ The full path:
 Compare two files:  
 `vimdiff file1 file2`
 
+### Navigation
+
+Previous/next conflicting line: `[c` / `]c`
+
 ### Show/hide identical lines
 
 Show all lines:  
