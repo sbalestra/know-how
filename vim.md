@@ -238,3 +238,7 @@ Open the current fold:
 
 Close the current fold:  
 `zc`
+
+### Long lines
+
+Line wrap: `:set wrap`
