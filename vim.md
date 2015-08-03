@@ -97,6 +97,17 @@ At the end of the current word:
 
 ## Advanced editing
 
+### Switch case of a single character
+
+To lowercase:
+`vu`
+
+To uppercase:
+`vU`
+
+After pressing `v` one can also navigate to select more text.
+
+
 ### Insert text at the beginning of multiple visually selected lines
 
 1. Use `Ctrl-v` to select the first column of text in the lines to edit
