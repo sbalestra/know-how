@@ -37,8 +37,10 @@ Gear-wheel (top right corner) -> System settings -> Brightness & Lock
 ##### Configure Firefox
 - Preferences -> General -> Downloads -> Always ask me where to save files
 - Preferences -> Privacy -> Tracking -> Tell sites that I do not want to be tracked
+- Preferences -> Security -> [ ] Block reported attack sites ; [ ] Block reported web forgeries
 - Preferences -> Advanced -> Data choices -> Disable all
 - Preferences -> Advanced -> General -> Browsing -> [X] Use autoscrolling, [ ] Use smooth scrolling
+- Preferences -> Advanced -> Certificates -> [ ] Query OCSP responder servers to confirm the current validity of certificates
 
 If Firefox doesn't recognize PDF files, but instead wants to open them with VLC, open (or create) `~/.local/share/applications/defaults.list` and add the following lines:
 
