@@ -164,6 +164,27 @@ Get a list of commits including which files were changed:
 
 There are other commands as well, see http://stackoverflow.com/a/1230094
 
+## Ignoring
+
+### Temporarily ignore an already commited file
+
+Ignore the file:
+
+    git update-index --assume-unchanged config.xml
+
+Unignore the file:
+
+    git update-index --no-assume-unchanged config.xml
+
+See temporarily ignored files:
+
+    git ls-files -v | grep ^h
+
+Sources:
+
+- http://blog.bfitz.us/?p=1811
+- http://stackoverflow.com/a/26245961
+
 ## Resetting
 
 See http://git-scm.com/blog/2011/07/11/reset.html
