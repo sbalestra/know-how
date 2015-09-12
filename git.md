@@ -137,18 +137,23 @@ Show diff between working dirctory and the most recent commit:
 
     git diff HEAD
 
-Show diff between two commits:
+Show difference between two commits (specify them using hashes or branch names):
 
-    git diff oldhash newhash
+`git diff oldhash newhash` = `git diff oldhash..newhash`
 
 Show diff between an older commit and its parent:  
 
 `git diff oldhash^!` (diff only) or `git show oldhash` (diff and commit message) (Source: https://stackoverflow.com/questions/436362/shorthand-for-diff-of-git-commit-with-its-parent )
 
+Show diff between branch and the common ancestor of another branch:
+
+    git diff otherbranch...thebranch
+
 Sources:
 
 - http://git-scm.com/docs/git-diff
 - http://www.gitguys.com/topics/git-diff/
+- http://stackoverflow.com/a/7256391
 
 ### Diff options
 
