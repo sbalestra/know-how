@@ -1,5 +1,29 @@
 # Git cheat sheet
 
+## Initial settings
+
+Set name and email address:
+
+    git config --global user.name "John Doe"
+    git config --global user.email johndoe@example.com
+
+Make output colourful:
+
+    git config --global color.ui "auto"
+
+Prevent warnings when pushing (push only the current branch, not all):
+
+    git config --global push.default simple
+
+Set default text editor:
+
+`git config --global core.editor "nano"` (for beginners)
+`git config --global core.editor "vim"` (only if you know vim!)
+
+Check settings:
+
+    git config --list
+
 ## Tutorials
 
 - http://rypress.com/tutorials/git/index
