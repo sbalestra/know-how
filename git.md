@@ -187,11 +187,21 @@ Specify what words look like: `--word-diff-regex=[^[:space:],]+`
 
 ## Getting information
 
+### List of commits including names of changed files
+
 Get a list of commits including which files were changed:  
 
     git log --stat
 
 There are other commands as well, see http://stackoverflow.com/a/1230094
+
+### Show which commits changed a file/directory
+
+    git log --follow thefilename
+
+The option `--follow` understands file renames.
+
+Source: http://stackoverflow.com/a/8808453
 
 ## Ignoring
 
