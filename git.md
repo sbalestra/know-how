@@ -216,6 +216,15 @@ The option `--follow` understands file renames.
 
 Source: http://stackoverflow.com/a/8808453
 
+### Show changes to a single file over multiple commits
+
+    git log -p --follow -- thefile
+
+`-p` shows changes
+`--follow` understands file renames
+
+Source: http://stackoverflow.com/a/5493663 
+
 ## Ignoring
 
 ### Temporarily ignore an already commited file
