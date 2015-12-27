@@ -107,6 +107,19 @@ Deleting a remote branch:
 
 (Source: http://stackoverflow.com/a/2421063 )
 
+### Move branch pointer
+
+If you are using a stable branch (`master`) and a development branch (`dev`), you occasionally want to forward the master branch pointer like this:
+
+    # make working directory clean, e.g. by comitting all changes
+    git checkout master
+    git reset --hard dev # or use hash instead of dev
+
+Or alternatively:
+
+    git checkout dev
+    git branch -f master dev # or use hash instead of dev
+
 ## Rebasing
 
 The command
