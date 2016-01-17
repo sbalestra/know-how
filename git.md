@@ -260,6 +260,12 @@ See also http://git-scm.com/book/en/v1/Git-Tools-Stashing
 
 This will result in a clean working directory.
 
+You can also stash only parts using
+
+    git stash -p
+
+which works similar to `git add -p`.
+
 ##### See list of stored stashes
 
     git stash list
