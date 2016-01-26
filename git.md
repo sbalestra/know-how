@@ -376,3 +376,15 @@ Delete the temporary branch:
     git branch -D tmp
 
 Source: http://stackoverflow.com/questions/5717026/how-to-git-cherry-pick-only-changes-to-certain-files
+
+## Issues with tools
+
+### git diff on Windows bash console shows angle brackets with numbers instead of umlauts
+
+This might be due to MinTTY (default terminal of MSys2) having the wrong character set.
+
+Determine the location of `.minttyrc`. Probably the same as that of `.gitconfig`:
+
+    git config --global --edit
+
+Change the character set from `Charset=CP1252` to `Charset=UTF-8`.
