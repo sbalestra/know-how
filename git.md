@@ -353,6 +353,38 @@ Sources:
 - https://stackoverflow.com/questions/5667884/how-to-squash-commits-in-git-after-they-have-been-pushed
 - http://git-scm.com/docs/git-push (see last example at the end of the document: `git push origin +dev:master`)
 
+## Bisecting
+
+### Normal bisecting
+
+Bisecting can help you finding an error-introducing commit. For this you need to know two commits:
+
+- One commit you know is fine
+- Another (later) commit you know is buggy
+
+Initialize the bisecting system: `git bisect start`
+
+Tell git the good commit: `git bisect good <commit>`
+
+Tell git the bad commit: `git bisect bad <commit>` (this will checkout another commit between the good and the bad commit)
+
+Repeatedly tell git if the currently checked out commit is good or bad: `git bisect good` or `git bisect bad`
+
+In the end git will report:
+
+    <commit> is the first bad commit
+    ...
+
+Reset the bisecting system: `git bisect reset` (you can also use this to abort a running bisection) This will reset your HEAD to its previous position.
+
+### Bisecting on stereoids
+
+You can automatically do the bisecting if you have a script that can decide if the current state is erroneous. The script should have an exit status 0 if the project is good or non-0 otherwise. Tell git the known good and bad commits, then run: `git bisect run test-for-error.sh`
+
+Sources:
+- https://kleinweby.de/2012/03/git-bisect-wer-hat-wann-was-kaputt-gespielt/
+- https://git-scm.com/book/en/v2/Git-Tools-Debugging-with-Git
+
 ## Complex use-cases
 
 ### Apply changes of a diverging branch (with confidential information in some files) into another branch
