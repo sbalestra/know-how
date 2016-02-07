@@ -38,6 +38,38 @@ and for attached databases:
 
     ALTER TABLE 'oldname' RENAME TO 'newname';
 
+## Spatial indices
+
+Based on: https://www.gaia-gis.it/gaia-sins/spatialite-cookbook/html/rtree.html
+
+There are two kinds of spatial indices:
+
+- R*Tree (current)
+- MBR (deprecated)
+
+### Create R*Tree index
+
+    BEGIN; SELECT CreateSpatialIndex('mytable', 'GEOMETRY'); COMMIT;
+
+### Determine if R*Tree index was written
+
+Look out for the following tables:
+
+- `idx_mytable_GEOMETRY`
+- `idx_mytable_GEOMETRY_node`
+- `idx_mytable_GEOMETRY_parent`
+- `idx_mytable_GEOMETRY_rowid`
+
+### Profiting from a R*Tree index
+
+Unfortunately, queries need to be restructured to profit from indices.
+
+Links:
+- https://www.gaia-gis.it/fossil/libspatialite/wiki?name=SpatialIndex
+- https://www.gaia-gis.it/gaia-sins/spatialite-tutorial-2.3.1.html (section 8)
+
+(This section needs to be expanded.)
+
 ## Other
 
 ##### Use timer
