@@ -67,6 +67,8 @@ Unfortunately, queries need to be restructured to profit from indices.
 Links:
 - https://www.gaia-gis.it/fossil/libspatialite/wiki?name=SpatialIndex
 - https://www.gaia-gis.it/gaia-sins/spatialite-tutorial-2.3.1.html (section 8)
+- http://www.surfaces.co.il/spatialite-speedup-your-query-with-spatial-indexing/
+- https://groups.google.com/forum/#!original/spatialite-users/RpNSY4q4Hdc/6R75MZzAvYYJ (nice comparison of different query forms)
 
 (This section needs to be expanded.)
 
