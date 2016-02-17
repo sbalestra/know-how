@@ -56,6 +56,12 @@ application/pdf=evince.desktop;
 ##### Disable subpixel font anti-aliasing 
 `gnome-tweak-tool` -> Fonts -> Antialiasing -> Grayscale
 
+##### Disable tap (on mousepad) to click
+
+On MATE:
+
+System -> Preferences -> Startup Applications -> Startup Programs -> Add -> `synclient MaxTapTime=0`
+
 ### Configure Eclipse
 
 ##### Switch Tabs with Ctrl-Tab
