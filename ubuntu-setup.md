@@ -114,3 +114,14 @@ In `/etc/fstab` add the options `noatime,nodiratime`.
 The animation can be disabled with `gsettings set org.gnome.desktop.interface enable-animations false`. Unfortunately the setting is not permanent. http://forum.ubuntuusers.de/topic/gnome-animationen-deaktivieren/ recommends:
 
 Start `gnome-session-properties` and put the above command into auto start.
+
+##### Fix high CPU load with Ubuntu's standard window manager on VirtualBox
+
+Source: https://askubuntu.com/questions/207813/why-does-a-ubuntu-guest-in-virtualbox-run-very-very-slowly/214968#214968
+
+- `sudo apt-get install linux-headers-$(uname -r) build-essential`
+- Install Guest Additions
+- Add the line `vboxvideo` to the file `/etc/modules`
+- Shutdown the virtual machine
+- VM settings -> Display -> [X] Enable 3D acceleration
+- Check: `/usr/lib/nux/unity_support_test -p` should report all yes
