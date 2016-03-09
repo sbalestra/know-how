@@ -105,7 +105,13 @@ Push only the current branch and only if it has a similarly named remote trackin
 In `/etc/fstab` add the options `noatime,nodiratime`.
 
 ##### Remove packages
-     sudo apt-get autoremove -y libreoffice-* transmission-* deja-dup zeitgeist bluez bluez-caps brasero rhythmbox gnome-screensaver apport thunderbird unity-webapps-common gnome-mahjongg gnome-sudoku gnome-orca aisleriot gnomine ttf-indic-fonts-core ppp brltty brltty-x11 gnome-accessibility-themes espeak espeak-data libespeak1 libgnome-speech7 evolution-common evolution-data-server evolution-plugins totem
+     sudo apt-get autoremove -y libreoffice-* transmission-* deja-dup zeitgeist bluez brasero rhythmbox gnome-screensaver apport thunderbird unity-webapps-common
+    
+The wisdom of the Internet said that the following packets can also be removed:
+
+     gnome-mahjongg gnome-sudoku gnome-orca aisleriot gnomine ttf-indic-fonts-core ppp brltty brltty-x11 gnome-accessibility-themes espeak espeak-data libespeak1 libgnome-speech7 evolution-common evolution-data-server evolution-plugins totem
+
+However, the removal of one of these probably caused the problem, that clicking gear-wheel -> System Settings... won't display anything anymore. The corresponding window can be displayed using `gnome-control-center` but is missing some elements. The situation seems identical or very similar to https://askubuntu.com/questions/453440/missing-system-settings-after-removing-some-packages . The thread mentions `evolution*` packages and a fix: `sudo apt-get install unity-control-center --no-install-recommends` which seems to work.
 
 ##### Disable border shadows
     gsettings set org.gnome.metacity compositing-manager false
