@@ -99,7 +99,7 @@ Push only the current branch and only if it has a similarly named remote trackin
 In `/etc/fstab` add the options `noatime,nodiratime`.
 
 ##### Remove packages
-     sudo apt-get autoremove libreoffice-* transmission-* deja-dup zeitgeist bluez brasero rhythmbox gnome-screensaver apport thunderbird unity-webapps-common
+     sudo apt-get autoremove -y libreoffice-* transmission-* deja-dup zeitgeist bluez bluez-caps brasero rhythmbox gnome-screensaver apport thunderbird unity-webapps-common gnome-mahjongg gnome-sudoku gnome-orca aisleriot gnomine ttf-indic-fonts-core ppp brltty brltty-x11 gnome-accessibility-themes espeak espeak-data libespeak1 libgnome-speech7 evolution-common evolution-data-server evolution-plugins totem
 
 ##### Disable border shadows
     gsettings set org.gnome.metacity compositing-manager false
