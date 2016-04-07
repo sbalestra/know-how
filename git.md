@@ -368,6 +368,8 @@ Tell git the good commit: `git bisect good <commit>`
 
 Tell git the bad commit: `git bisect bad <commit>` (this will checkout another commit between the good and the bad commit)
 
+Alternatively initialize and start with one command, which also tells git both a bad and one or multiple good commits: `git bisect start <badcommit> <goodcommit> <goodcommit>`
+
 Repeatedly tell git if the currently checked out commit is good or bad: `git bisect good` or `git bisect bad`
 
 In the end git will report:
@@ -376,6 +378,17 @@ In the end git will report:
     ...
 
 Reset the bisecting system: `git bisect reset` (you can also use this to abort a running bisection) This will reset your HEAD to its previous position.
+
+### Background
+
+The bisecting algorithm uses two rules:
+
+1. Ancestors of bad commits are kept
+2. Ancestors of good commits are removed
+
+Source: http://events.linuxfoundation.org/sites/events/files/slides/Enjoy%20Fighting%20regressions%20with%20git%20bisect,%20LinuxCon%20EU%202013.pdf (page 29)
+
+If you are looking for the commit where a function definition was erroneously removed, you must be careful to mark older commits (in other branches) where this function definition didn't yet exist as **good**.
 
 ### Bisecting on stereoids
 
