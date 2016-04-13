@@ -246,6 +246,22 @@ Sources:
 - http://blog.bfitz.us/?p=1811
 - http://stackoverflow.com/a/26245961
 
+## Reverting
+
+### Revert a single file to a specific revision
+
+Check what steps will be undone:
+
+    git diff <commit> -- <file>
+
+(`+` here means that you are going to remove this line)
+
+Revert the single file:
+
+    git checkout <commit> -- <file>
+
+(This will also stage the change.)
+
 ## Resetting
 
 See http://git-scm.com/blog/2011/07/11/reset.html
