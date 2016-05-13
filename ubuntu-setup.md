@@ -97,6 +97,7 @@ Window -> Preferences -> Run/Debug -> Console -> Console buffer size
 
 ##### Set default push policy
 Push only the current branch and only if it has a similarly named remote tracking branch on upstream (see also http://stackoverflow.com/a/17096880 ).
+
     git config --global push.default simple
 
 ## Performance tweaks
