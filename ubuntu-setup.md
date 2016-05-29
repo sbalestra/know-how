@@ -37,6 +37,7 @@ Gear-wheel (top right corner) -> System settings -> Brightness & Lock
 ##### Configure Firefox
 - Preferences -> General -> Downloads -> Always ask me where to save files
 - Preferences -> Privacy -> Tracking -> Tell sites that I do not want to be tracked
+- Preferences -> Privacy -> History -> Use custom settings for history -> Third-party cookies: never ; Keep until: I close Firefox
 - Preferences -> Security -> [ ] Block reported attack sites ; [ ] Block reported web forgeries
 - Preferences -> Advanced -> Data choices -> Disable all
 - Preferences -> Advanced -> General -> Browsing -> [X] Use autoscrolling, [ ] Use smooth scrolling
