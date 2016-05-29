@@ -104,6 +104,8 @@ Push only the current branch and only if it has a similarly named remote trackin
 ##### Don't save file/directory access times
 In `/etc/fstab` add the options `noatime,nodiratime`.
 
+Make sure that there are no syntax errors by remounting the changed entry, e.g. `sudo mount -o remount /`. There MUST NOT be any error messages.
+
 ##### Remove packages
      sudo apt-get autoremove libreoffice-* transmission-* deja-dup zeitgeist bluez brasero rhythmbox gnome-screensaver apport thunderbird unity-webapps-common
 
