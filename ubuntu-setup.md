@@ -97,6 +97,7 @@ Window -> Preferences -> Run/Debug -> Console -> Console buffer size
 
 ##### Set default push policy
 Push only the current branch and only if it has a similarly named remote tracking branch on upstream (see also http://stackoverflow.com/a/17096880 ).
+
     git config --global push.default simple
 
 ## Performance tweaks
@@ -107,7 +108,13 @@ In `/etc/fstab` add the options `noatime,nodiratime`.
 Make sure that there are no syntax errors by remounting the changed entry, e.g. `sudo mount -o remount /`. There MUST NOT be any error messages.
 
 ##### Remove packages
-     sudo apt-get autoremove libreoffice-* transmission-* deja-dup zeitgeist bluez brasero rhythmbox gnome-screensaver apport thunderbird unity-webapps-common
+     sudo apt-get autoremove -y libreoffice-* transmission-* deja-dup zeitgeist bluez brasero rhythmbox gnome-screensaver apport thunderbird unity-webapps-common
+    
+The wisdom of the Internet said that the following packets can also be removed:
+
+     gnome-mahjongg gnome-sudoku gnome-orca aisleriot gnomine ttf-indic-fonts-core ppp brltty brltty-x11 gnome-accessibility-themes espeak espeak-data libespeak1 libgnome-speech7 evolution-common evolution-data-server evolution-plugins totem
+
+However, the removal of one of these probably caused the problem, that clicking gear-wheel -> System Settings... won't display anything anymore. The corresponding window can be displayed using `gnome-control-center` but is missing some elements. The situation seems identical or very similar to https://askubuntu.com/questions/453440/missing-system-settings-after-removing-some-packages . The thread mentions `evolution*` packages and a fix: `sudo apt-get install unity-control-center --no-install-recommends` which seems to work.
 
 ##### Disable border shadows
     gsettings set org.gnome.metacity compositing-manager false
@@ -116,3 +123,14 @@ Make sure that there are no syntax errors by remounting the changed entry, e.g. 
 The animation can be disabled with `gsettings set org.gnome.desktop.interface enable-animations false`. Unfortunately the setting is not permanent. http://forum.ubuntuusers.de/topic/gnome-animationen-deaktivieren/ recommends:
 
 Start `gnome-session-properties` and put the above command into auto start.
+
+##### Fix high CPU load with Ubuntu's standard window manager on VirtualBox
+
+Source: https://askubuntu.com/questions/207813/why-does-a-ubuntu-guest-in-virtualbox-run-very-very-slowly/214968#214968
+
+- `sudo apt-get install linux-headers-$(uname -r) build-essential`
+- Install Guest Additions
+- Add the line `vboxvideo` to the file `/etc/modules`
+- Shutdown the virtual machine
+- VM settings -> Display -> [X] Enable 3D acceleration
+- Check: `/usr/lib/nux/unity_support_test -p` should report all yes
