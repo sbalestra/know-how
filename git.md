@@ -186,11 +186,20 @@ Show diff between branch and the common ancestor of another branch:
 
     git diff otherbranch...thebranch
 
+Show difference between two commits for a single file (or directory):
+
+`git diff oldhash:thefile newhash:thefile`
+
+or e.g.
+
+`git diff oldhash:./ newhash:thefile:./`
+
 Sources:
 
 - http://git-scm.com/docs/git-diff
 - http://www.gitguys.com/topics/git-diff/
 - http://stackoverflow.com/a/7256391
+- http://stackoverflow.com/a/5586435
 
 ### Diff options
 
