@@ -101,11 +101,11 @@ Deleting a remote branch:
 
 ### Showing all branches as tree
 
-    git config --global alias.lgb "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches"
+    git config --global alias.lgb "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches --full-history"
 
     git lgb
 
-(Source: http://stackoverflow.com/a/2421063 )
+(Source: http://stackoverflow.com/a/2421063 with added `--full-history`)
 
 ### Move branch pointer
 
@@ -186,11 +186,20 @@ Show diff between branch and the common ancestor of another branch:
 
     git diff otherbranch...thebranch
 
+Show difference between two commits for a single file (or directory):
+
+`git diff oldhash:thefile newhash:thefile`
+
+or e.g.
+
+`git diff oldhash:./ newhash:thefile:./`
+
 Sources:
 
 - http://git-scm.com/docs/git-diff
 - http://www.gitguys.com/topics/git-diff/
 - http://stackoverflow.com/a/7256391
+- http://stackoverflow.com/a/5586435
 
 ### Diff options
 
