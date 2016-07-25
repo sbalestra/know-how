@@ -50,6 +50,8 @@ If Firefox doesn't recognize PDF files, but instead wants to open them with VLC,
 application/pdf=evince.desktop;
 ```
 
+Immediately load tab contents after restart: about:config -> Set `browser.sessionstore.restore_on_demand` to false (http://tabmixplus.org/support/viewpage.php?t=3&p=session-startexit)
+
 ##### Configure Terminal
 - Increase scrollbuffer
 - Black font on white background
