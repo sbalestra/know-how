@@ -217,13 +217,27 @@ Get a list of commits including which files were changed:
 
 There are other commands as well, see http://stackoverflow.com/a/1230094
 
-### Show which commits changed a file/directory
+### Show which commits changed a file
 
     git log --follow thefilename
 
 The option `--follow` understands file renames.
 
 Source: http://stackoverflow.com/a/8808453
+
+### Show which commits changed a directory
+
+    git log --stat --after="2016-01-01" mydir1 mydir2
+
+Shorter output:
+
+    git log --stat --oneline --after="2016-01-01" mydir1 mydir2
+
+Show changes to files:
+
+    git log --stat -p --after="2016-01-01" mydir1 mydir2
+
+Source: http://stackoverflow.com/a/16343950 , http://stackoverflow.com/a/4106051
 
 ### Show changes to a single file over multiple commits
 
