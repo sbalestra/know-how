@@ -217,13 +217,15 @@ Get a list of commits including which files were changed:
 
 There are other commands as well, see http://stackoverflow.com/a/1230094
 
-### Show which commits changed a file
+### Show which commits changed a file / changes to a single file over multiple commits
 
-    git log --follow thefilename
+    git log [-p] --follow thefilename
 
 The option `--follow` understands file renames.
 
-Source: http://stackoverflow.com/a/8808453
+The option `-p` (patch) shows the changes itself.
+
+Sources: http://stackoverflow.com/a/8808453, http://stackoverflow.com/a/5493663 
 
 ### Show which commits changed a directory
 
@@ -239,14 +241,6 @@ Show changes to files:
 
 Source: http://stackoverflow.com/a/16343950 , http://stackoverflow.com/a/4106051
 
-### Show changes to a single file over multiple commits
-
-    git log -p --follow -- thefile
-
-`-p` shows changes
-`--follow` understands file renames
-
-Source: http://stackoverflow.com/a/5493663 
 
 ## Ignoring
 
