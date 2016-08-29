@@ -170,9 +170,13 @@ Show diff between the index and the most recent commit:
 
 `git diff --staged` = `git diff --cached`
 
-Show diff between working dirctory and the most recent commit:
+Show diff between working directory and the most recent commit:
 
     git diff HEAD
+
+Show diff between working directory and another commit (general form of the previous entry):
+
+    git diff thecommit
 
 Show difference between two commits (specify them using hashes or branch names):
 
