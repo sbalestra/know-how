@@ -69,6 +69,10 @@ or
 
     git branch --set-upstream-to=origin/remotebranch localbranch
 
+To remove the tracking information do (from http://stackoverflow.com/a/3046478 ):
+
+    git branch --unset-upstream
+
 ### Checkout a remote branch / Create a tracking branch from a remote branch
 
     git checkout --track origin/remotebranch
