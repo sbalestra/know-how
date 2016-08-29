@@ -211,6 +211,10 @@ Limit diff to single words: `--word-diff[=color]`
 
 Specify what words look like: `--word-diff-regex=[^[:space:],]+`
 
+### Invert diff direction
+
+`diff -R`
+
 ## Getting information
 
 ### List of commits including names of changed files
