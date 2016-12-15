@@ -237,7 +237,11 @@ The option `--follow` understands file renames.
 
 The option `-p` (patch) shows the changes itself.
 
-Sources: http://stackoverflow.com/a/8808453, http://stackoverflow.com/a/5493663 
+For looking at the history of a file in another branch:
+
+    git log [-p] --follow thebranchname -- thefilename
+
+Sources: http://stackoverflow.com/a/8808453, http://stackoverflow.com/a/5493663, http://stackoverflow.com/a/18830778
 
 ### Show which commits changed a directory
 
