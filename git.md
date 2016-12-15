@@ -258,6 +258,13 @@ Show changes to files:
 Source: http://stackoverflow.com/a/16343950 , http://stackoverflow.com/a/4106051
 
 
+### List deleted files
+
+    git log --no-renames --diff-filter=D --summary
+
+Source: http://stackoverflow.com/a/6018043
+
+
 ## Ignoring
 
 ### Temporarily ignore an already commited file
