@@ -28,6 +28,18 @@ Check settings:
 
 - http://rypress.com/tutorials/git/index
 
+## Amending
+
+You use amending if you want to change an already committed commit. Preferably do this before pushing because this rewrites history.
+
+### Fix commit message
+
+This will open the editor to change your commit message:
+
+`git commit --amend`
+
+The commit date will stay the same.
+
 ## Branching
 
 ### Create a new local branch
