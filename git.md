@@ -121,7 +121,11 @@ Deleting a remote branch:
 
     git lgb
 
-(Source: http://stackoverflow.com/a/2421063 with added `--full-history`)
+(Source: http://stackoverflow.com/a/2421063 with added
+
+- `--all` (to see newly fetched commits, Source: http://stackoverflow.com/a/31179095 )
+- `--full-history`
+)
 
 ### Move branch pointer
 
