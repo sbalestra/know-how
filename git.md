@@ -117,7 +117,7 @@ Deleting a remote branch:
 
 ### Showing all branches as tree
 
-    git config --global alias.lgb "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches --full-history --all"
+    git config --global alias.lgb "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches --full-history --all --author-date-order"
 
     git lgb
 
@@ -125,6 +125,7 @@ Deleting a remote branch:
 
 - `--all` (to see newly fetched commits, Source: http://stackoverflow.com/a/31179095 )
 - `--full-history`
+- `--author-date-order` : Source https://git-scm.com/docs/git-log#_commit_ordering
 )
 
 ### Move branch pointer
