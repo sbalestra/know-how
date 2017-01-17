@@ -274,6 +274,17 @@ Show changes to files:
 
 Source: http://stackoverflow.com/a/16343950 , http://stackoverflow.com/a/4106051
 
+### Show files changed by a single commit
+
+Plumbing command (for scripts):
+
+    git diff-tree --no-commit-id --name-only -r bd61ad98
+
+Porcelain command (for human users):
+
+    git show --pretty="" --name-only bd61ad98
+
+Source: http://stackoverflow.com/a/424142
 
 ### List deleted files
 
