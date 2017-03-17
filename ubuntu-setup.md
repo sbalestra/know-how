@@ -56,7 +56,7 @@ Immediately load tab contents after restart: about:config -> Set `browser.sessio
 - Increase scrollbuffer
 - Black font on white background
 
-##### Disable subpixel font anti-aliasing 
+##### Disable subpixel font anti-aliasing
 `gnome-tweak-tool` -> Fonts -> Antialiasing -> Grayscale
 
 ##### Disable tap (on mousepad) to click
@@ -112,7 +112,7 @@ Make sure that there are no syntax errors by remounting the changed entry, e.g. 
 
 ##### Remove packages
      sudo apt-get autoremove -y libreoffice-* transmission-* deja-dup zeitgeist bluez brasero rhythmbox gnome-screensaver apport thunderbird unity-webapps-common
-    
+
 The wisdom of the Internet said that the following packets can also be removed:
 
      gnome-mahjongg gnome-sudoku gnome-orca aisleriot gnomine ttf-indic-fonts-core ppp brltty brltty-x11 gnome-accessibility-themes espeak espeak-data libespeak1 libgnome-speech7 evolution-common evolution-data-server evolution-plugins totem
@@ -137,3 +137,11 @@ Source: https://askubuntu.com/questions/207813/why-does-a-ubuntu-guest-in-virtua
 - Shutdown the virtual machine
 - VM settings -> Display -> [X] Enable 3D acceleration
 - Check: `/usr/lib/nux/unity_support_test -p` should report all yes
+
+## Unity-specific setting
+
+### Add Applet for showing system load
+
+    sudo apt install indicator-multiload
+
+Then search in the Dash for "System Load Indicator".
