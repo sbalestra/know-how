@@ -13,15 +13,30 @@ This document shows some of the steps I apply to newly installed Ubuntu systems 
 ## Install new things
 
 ### Install from repository
+
+```bash
     sudo apt-get update
     sudo apt-get upgrade
     sudo apt-get install wireshark vim colordiff tree libxml2-utils xmlstarlet dos2unix gnome-session-fallback gnome-tweak-tool vlc
+```
 
 Re-Login with "GNOME Flashback (Metacity)"
 
 ### Eclipse
 
 Install Eclipse with file from http://www.eclipse.org
+
+### Google Chrome
+
+```bash
+cd /tmp
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+sudo apt-get -f install
+# google-chrome # run Chrome
+```
+
+Source: http://askubuntu.com/a/510063
 
 ## Make working more pleasant
 
