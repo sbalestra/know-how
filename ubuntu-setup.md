@@ -15,9 +15,26 @@ This document shows some of the steps I apply to newly installed Ubuntu systems 
 ### Install from repository
 
 ```bash
-    sudo apt-get update
-    sudo apt-get upgrade
-    sudo apt-get install wireshark vim colordiff tree libxml2-utils xmlstarlet dos2unix gnome-session-fallback gnome-tweak-tool vlc
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install wireshark vim colordiff tree libxml2-utils xmlstarlet dos2unix gnome-tweak-tool vlc
+```
+
+### Install MATE
+
+```bash
+sudo apt install mate-desktop-environment-core
+```
+
+See also:
+
+- http://wiki.mate-desktop.org/download
+- https://wiki.ubuntuusers.de/MATE/
+
+### Install Gnome Flashback/Fallback (Alternative to MATE)
+
+```bash
+sudo apt-get install gnome-session-fallback
 ```
 
 Re-Login with "GNOME Flashback (Metacity)"
