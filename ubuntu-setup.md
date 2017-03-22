@@ -32,6 +32,8 @@ See also:
 - http://wiki.mate-desktop.org/download
 - https://wiki.ubuntuusers.de/MATE/
 
+Right-click on top bar -> Add to panel -> System monitor
+
 ### Install Gnome Flashback/Fallback (Alternative to MATE)
 
 ```bash
