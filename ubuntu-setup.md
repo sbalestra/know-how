@@ -157,6 +157,10 @@ The wisdom of the Internet said that the following packets can also be removed:
 
 However, the removal of one of these probably caused the problem, that clicking gear-wheel -> System Settings... won't display anything anymore. The corresponding window can be displayed using `gnome-control-center` but is missing some elements. The situation seems identical or very similar to https://askubuntu.com/questions/453440/missing-system-settings-after-removing-some-packages . The thread mentions `evolution*` packages and a fix: `sudo apt-get install unity-control-center --no-install-recommends` which seems to work.
 
+##### MATE: Disable dropshadows / animations
+
+System -> Preferences -> Look and feel -> Windows -> Tab: General -> [ ] Enable software compositing window manager
+
 ##### Disable border shadows
     gsettings set org.gnome.metacity compositing-manager false
 
