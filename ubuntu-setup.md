@@ -127,8 +127,11 @@ Window -> Preferences -> Run/Debug -> Console -> Console buffer size
     git config --global color.ui true
 
 ##### Ignore Vim swap files
-    echo '.*.sw?' >> ~/.gitignore_global
-    git config --global core.excludesfile ~/.gitignore_global
+
+```bash
+echo '.*.sw?' >> ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+```
 
 ##### Use Vim as Git's editor
     git config --global core.editor "vim"
