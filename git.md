@@ -226,6 +226,14 @@ Sources:
 - http://stackoverflow.com/a/7256391
 - http://stackoverflow.com/a/5586435
 
+### Don't diff renames
+
+`diff -M` = `diff --find-renames`
+
+(Not needed anymore with Git 2.9 and later.)
+
+Source: https://stackoverflow.com/questions/5730460/how-to-do-a-git-diff-on-moved-renamed-file
+
 ### Diff options
 
 Limit diff to single words: `--word-diff[=color]`
