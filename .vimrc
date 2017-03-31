@@ -30,3 +30,6 @@ augroup myvimrc
 	au!
 	au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
+
+" for python files: tab = 4 spaces ( http://stackoverflow.com/a/9986497 )
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
