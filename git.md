@@ -28,6 +28,18 @@ Check settings:
 
 - http://rypress.com/tutorials/git/index
 
+## Amending
+
+You use amending if you want to change an already committed commit. Preferably do this before pushing because this rewrites history.
+
+### Fix commit message
+
+This will open the editor to change your commit message:
+
+`git commit --amend`
+
+The commit date will stay the same.
+
 ## Branching
 
 ### Create a new local branch
@@ -69,6 +81,10 @@ or
 
     git branch --set-upstream-to=origin/remotebranch localbranch
 
+To remove the tracking information do (from http://stackoverflow.com/a/3046478 ):
+
+    git branch --unset-upstream
+
 ### Checkout a remote branch / Create a tracking branch from a remote branch
 
     git checkout --track origin/remotebranch
@@ -101,11 +117,16 @@ Deleting a remote branch:
 
 ### Showing all branches as tree
 
-    git config --global alias.lgb "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches --full-history"
+    git config --global alias.lgb "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches --full-history --all --author-date-order"
 
     git lgb
 
-(Source: http://stackoverflow.com/a/2421063 with added `--full-history`)
+(Source: http://stackoverflow.com/a/2421063 with added
+
+- `--all` (to see newly fetched commits, Source: http://stackoverflow.com/a/31179095 )
+- `--full-history`
+- `--author-date-order` : Source https://git-scm.com/docs/git-log#_commit_ordering
+)
 
 ### Move branch pointer
 
@@ -170,9 +191,13 @@ Show diff between the index and the most recent commit:
 
 `git diff --staged` = `git diff --cached`
 
-Show diff between working dirctory and the most recent commit:
+Show diff between working directory and the most recent commit:
 
     git diff HEAD
+
+Show diff between working directory and another commit (general form of the previous entry):
+
+    git diff thecommit
 
 Show difference between two commits (specify them using hashes or branch names):
 
@@ -201,11 +226,23 @@ Sources:
 - http://stackoverflow.com/a/7256391
 - http://stackoverflow.com/a/5586435
 
+### Don't diff renames
+
+`diff -M` = `diff --find-renames`
+
+(Not needed anymore with Git 2.9 and later.)
+
+Source: https://stackoverflow.com/questions/5730460/how-to-do-a-git-diff-on-moved-renamed-file
+
 ### Diff options
 
 Limit diff to single words: `--word-diff[=color]`
 
 Specify what words look like: `--word-diff-regex=[^[:space:],]+`
+
+### Invert diff direction
+
+`diff -R`
 
 ## Getting information
 
@@ -217,22 +254,52 @@ Get a list of commits including which files were changed:
 
 There are other commands as well, see http://stackoverflow.com/a/1230094
 
-### Show which commits changed a file/directory
+### Show which commits changed a file / changes to a single file over multiple commits
 
-    git log --follow thefilename
+    git log [-p] --follow thefilename
 
 The option `--follow` understands file renames.
 
-Source: http://stackoverflow.com/a/8808453
+The option `-p` (patch) shows the changes itself.
 
-### Show changes to a single file over multiple commits
+For looking at the history of a file in another branch:
 
-    git log -p --follow -- thefile
+    git log [-p] --follow thebranchname -- thefilename
 
-`-p` shows changes
-`--follow` understands file renames
+Sources: http://stackoverflow.com/a/8808453, http://stackoverflow.com/a/5493663, http://stackoverflow.com/a/18830778
 
-Source: http://stackoverflow.com/a/5493663 
+### Show which commits changed a directory
+
+    git log --stat --after="2016-01-01" mydir1 mydir2
+
+Shorter output:
+
+    git log --stat --oneline --after="2016-01-01" mydir1 mydir2
+
+Show changes to files:
+
+    git log --stat -p --after="2016-01-01" mydir1 mydir2
+
+Source: http://stackoverflow.com/a/16343950 , http://stackoverflow.com/a/4106051
+
+### Show files changed by a single commit
+
+Plumbing command (for scripts):
+
+    git diff-tree --no-commit-id --name-only -r bd61ad98
+
+Porcelain command (for human users):
+
+    git show --pretty="" --name-only bd61ad98
+
+Source: http://stackoverflow.com/a/424142
+
+### List deleted files
+
+    git log --no-renames --diff-filter=D --summary
+
+Source: http://stackoverflow.com/a/6018043
+
 
 ## Ignoring
 

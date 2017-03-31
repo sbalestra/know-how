@@ -13,15 +13,50 @@ This document shows some of the steps I apply to newly installed Ubuntu systems 
 ## Install new things
 
 ### Install from repository
-    sudo apt-get update
-    sudo apt-get upgrade
-    sudo apt-get install wireshark vim colordiff tree libxml2-utils xmlstarlet dos2unix gnome-session-fallback gnome-tweak-tool vlc
+
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install wireshark vim colordiff tree libxml2-utils xmlstarlet dos2unix gnome-tweak-tool vlc
+```
+
+### Install MATE
+
+```bash
+sudo apt install mate-desktop-environment-core caja-open-terminal
+```
+`caja-open-terminal`: Right-click in file manager allows to open a terminal in this directory.
+
+See also:
+
+- http://wiki.mate-desktop.org/download
+- https://wiki.ubuntuusers.de/MATE/
+
+Right-click on top bar -> Add to panel -> System monitor
+
+### Install Gnome Flashback/Fallback (Alternative to MATE)
+
+```bash
+sudo apt-get install gnome-session-fallback
+```
 
 Re-Login with "GNOME Flashback (Metacity)"
 
 ### Eclipse
 
 Install Eclipse with file from http://www.eclipse.org
+
+### Google Chrome
+
+```bash
+cd /tmp
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+sudo apt-get -f install
+# google-chrome # run Chrome
+```
+
+Source: http://askubuntu.com/a/510063
 
 ## Make working more pleasant
 
@@ -56,7 +91,7 @@ Immediately load tab contents after restart: about:config -> Set `browser.sessio
 - Increase scrollbuffer
 - Black font on white background
 
-##### Disable subpixel font anti-aliasing 
+##### Disable subpixel font anti-aliasing
 `gnome-tweak-tool` -> Fonts -> Antialiasing -> Grayscale
 
 ##### Disable tap (on mousepad) to click
@@ -92,8 +127,11 @@ Window -> Preferences -> Run/Debug -> Console -> Console buffer size
     git config --global color.ui true
 
 ##### Ignore Vim swap files
-    echo '.*.sw?' >> ~/.gitignore_global
-    git config --global core.excludesfile ~/.gitignore_global
+
+```bash
+echo '.*.sw?' >> ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+```
 
 ##### Use Vim as Git's editor
     git config --global core.editor "vim"
@@ -112,12 +150,16 @@ Make sure that there are no syntax errors by remounting the changed entry, e.g. 
 
 ##### Remove packages
      sudo apt-get autoremove -y libreoffice-* transmission-* deja-dup zeitgeist bluez brasero rhythmbox gnome-screensaver apport thunderbird unity-webapps-common
-    
+
 The wisdom of the Internet said that the following packets can also be removed:
 
      gnome-mahjongg gnome-sudoku gnome-orca aisleriot gnomine ttf-indic-fonts-core ppp brltty brltty-x11 gnome-accessibility-themes espeak espeak-data libespeak1 libgnome-speech7 evolution-common evolution-data-server evolution-plugins totem
 
 However, the removal of one of these probably caused the problem, that clicking gear-wheel -> System Settings... won't display anything anymore. The corresponding window can be displayed using `gnome-control-center` but is missing some elements. The situation seems identical or very similar to https://askubuntu.com/questions/453440/missing-system-settings-after-removing-some-packages . The thread mentions `evolution*` packages and a fix: `sudo apt-get install unity-control-center --no-install-recommends` which seems to work.
+
+##### MATE: Disable dropshadows / animations
+
+System -> Preferences -> Look and feel -> Windows -> Tab: General -> [ ] Enable software compositing window manager
 
 ##### Disable border shadows
     gsettings set org.gnome.metacity compositing-manager false
@@ -137,3 +179,11 @@ Source: https://askubuntu.com/questions/207813/why-does-a-ubuntu-guest-in-virtua
 - Shutdown the virtual machine
 - VM settings -> Display -> [X] Enable 3D acceleration
 - Check: `/usr/lib/nux/unity_support_test -p` should report all yes
+
+## Unity-specific setting
+
+### Add Applet for showing system load
+
+    sudo apt install indicator-multiload
+
+Then search in the Dash for "System Load Indicator".
