@@ -100,6 +100,19 @@ On MATE:
 
 System -> Preferences -> Startup Applications -> Startup Programs -> Add -> `synclient MaxTapTime=0`
 
+##### Disable automatic updates (unattended-upgrades)
+
+`sudo -e /etc/apt/apt.conf.d/10periodic`
+
+add the following line
+
+`APT::Periodic::Unattended-Upgrade "0";`
+
+Alternative: Software Center -> Edit -> Software Sources -> Tab: Updates -> Automatically check for updates: Never
+
+Source: http://ask.xmodulo.com/disable-automatic-updates-ubuntu.html
+
+
 ### Configure Eclipse
 
 ##### Switch Tabs with Ctrl-Tab
