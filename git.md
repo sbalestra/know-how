@@ -352,6 +352,10 @@ See also http://git-scm.com/book/en/v1/Git-Tools-Stashing
 
 This will result in a clean working directory.
 
+To also stash new files, not yet known by Git use:
+
+    git stash -u
+
 You can also stash only parts using
 
     git stash -p
