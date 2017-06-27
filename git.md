@@ -20,6 +20,10 @@ Set default text editor:
 `git config --global core.editor "nano"` (for beginners)
 `git config --global core.editor "vim"` (only if you know vim!)
 
+Set displayed tab width to 4 (useful in projects where tabs and 4 spaces are used together):
+
+    git config --global core.pager 'less -x1,5'
+
 Check settings:
 
     git config --list
