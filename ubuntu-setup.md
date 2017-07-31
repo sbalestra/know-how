@@ -23,8 +23,9 @@ sudo apt-get install wireshark vim colordiff tree libxml2-utils xmlstarlet dos2u
 ### Install MATE
 
 ```bash
-sudo apt install mate-desktop-environment-core caja-open-terminal
+sudo apt install ubuntu-mate-core ubuntu-mate-desktop caja-open-terminal
 ```
+
 `caja-open-terminal`: Right-click in file manager allows to open a terminal in this directory.
 
 See also:
