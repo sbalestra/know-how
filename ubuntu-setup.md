@@ -23,8 +23,9 @@ sudo apt-get install wireshark vim colordiff tree libxml2-utils xmlstarlet dos2u
 ### Install MATE
 
 ```bash
-sudo apt install mate-desktop-environment-core caja-open-terminal
+sudo apt install ubuntu-mate-core ubuntu-mate-desktop caja-open-terminal
 ```
+
 `caja-open-terminal`: Right-click in file manager allows to open a terminal in this directory.
 
 See also:
@@ -99,6 +100,19 @@ Immediately load tab contents after restart: about:config -> Set `browser.sessio
 On MATE:
 
 System -> Preferences -> Startup Applications -> Startup Programs -> Add -> `synclient MaxTapTime=0`
+
+##### Disable automatic updates (unattended-upgrades)
+
+`sudo -e /etc/apt/apt.conf.d/10periodic`
+
+add the following line
+
+`APT::Periodic::Unattended-Upgrade "0";`
+
+Alternative: Software Center -> Edit -> Software Sources -> Tab: Updates -> Automatically check for updates: Never
+
+Source: http://ask.xmodulo.com/disable-automatic-updates-ubuntu.html
+
 
 ### Configure Eclipse
 
